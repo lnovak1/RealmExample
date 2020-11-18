@@ -1,0 +1,11 @@
+import Realm from 'realm';
+
+import RepositorySchema from '../schemas/RepositorySchema';
+
+export default function getRealm() {
+  return Realm.open({
+    schema: [RepositorySchema],
+    schemaVersion: 1, //add a version number
+
+  });
+}
